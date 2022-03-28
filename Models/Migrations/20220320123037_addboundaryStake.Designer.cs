@@ -3,67 +3,23 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Models;
 
 namespace Models.Migrations
 {
     [DbContext(typeof(StreetContext))]
-    partial class StreetContextModelSnapshot : ModelSnapshot
+    [Migration("20220320123037_addboundaryStake")]
+    partial class addboundaryStake
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("Models.Boundary", b =>
-                {
-                    b.Property<string>("KJSJBSM")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("DLZKS")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("JXCD")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("JXDJ")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("JXDM")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("JXMC")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("JXQD")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("JXZD")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("JZKS")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("QTXX")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SANLZKS")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SLZKS")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("是否争议")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("KJSJBSM");
-
-                    b.ToTable("Boundarys");
-                });
 
             modelBuilder.Entity("Models.BoundaryStake", b =>
                 {

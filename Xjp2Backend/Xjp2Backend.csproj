@@ -35,8 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\modelBuildingEconomy\ModelsBuildingEconomy.csproj" />
-    <ProjectReference Include="..\ModelCompany\ModelCompany.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
   </ItemGroup>
 

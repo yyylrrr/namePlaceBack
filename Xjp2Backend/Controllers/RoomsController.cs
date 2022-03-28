@@ -212,5 +212,12 @@ namespace Xjp2Backend.Controllers
         await _context.SaveChangesAsync();
             return await _repositoty.CreateTargetRain().ToListAsync();
         }
+
+
+        [HttpGet("[action]")]
+        public async Task<IEnumerable<object>> GetBoundaryStake(string kjsjbsm)
+        {
+            return await _repositoty.GetBoundaryStake(kjsjbsm).ToListAsync();
+        }
     }
 }

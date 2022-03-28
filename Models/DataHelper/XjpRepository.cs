@@ -2211,5 +2211,31 @@ namespace Models.DataHelper
             return rainpoint;
         }
 
+        public IQueryable<object> GetBoundaryStake(string kjsjbsm)
+        {
+            try
+            {
+                var countTax = (from ct in _context.BoundaryStakes.Where(cb => cb.KJSJBSM == kjsjbsm)
+                                select new
+                                {
+                                    JZBH = ct.JZBH,
+                                    KJSJBSM = ct.KJSJBSM,
+                                    GC = ct.GC,
+                                    ZZB = ct.ZZB,
+                                    HZB = ct.HZB,
+                                    JD = ct.JD,
+                                    WD = ct.WD,
+                                    JZDJ = ct.JZDJ,
+                                    JZLX = ct.JZLX,
+                                    JZCZ = ct.JZCZ
+                                });
+                return countTax;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
     }
 }

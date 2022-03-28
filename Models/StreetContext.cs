@@ -67,5 +67,11 @@ namespace Models
 
         //渍水
         public DbSet<Rain>  Rains { get; set; }
+
+        public DbSet<BoundaryStake> BoundaryStakes { get; set; }
+
+        public DbSet<Boundary> Boundarys { get; set; }
+
+        public DbSet<Park> Parks { get; set; }
     }
 }
